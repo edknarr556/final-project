@@ -1,0 +1,22 @@
+{
+  "name": "vjjl-site",
+  "version": "1.0.0",
+  "description": "Vehicular Jiu-Jitsu League DDD prototype",
+  "license": "Apache-2.0",
+  "author": {
+    "name": "Elijah Knarr"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "web-dev-server --node-resolve --open --watch",
+    "build": "echo 'no build step needed'"
+  },
+  "dependencies": {
+    "lit": "^3.2.1",
+    "@haxtheweb/d-d-d": "^25.0.0",
+    "@haxtheweb/i18n-manager": "^25.0.0"
+  },
+  "devDependencies": {
+    "@web/dev-server": "0.4.6"
+  }
+}
