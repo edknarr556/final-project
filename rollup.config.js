@@ -25,6 +25,7 @@ export default {
     }),
     importMetaAssets(),
     babel({
+      babelHelpers: 'bundled',
       plugins: [
         [
           'babel-plugin-template-html-minifier',

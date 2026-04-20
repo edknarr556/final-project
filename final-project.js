@@ -919,7 +919,7 @@ export class FinalProject extends DDDSuper(I18NMixin(LitElement)) {
         return html`
           <vjjl-content-band
             heading="Schedule Overview"
-            content="This routed page shows the schedule band using mock data now, but it is structured so you can swap in /api/schedule next."
+            content="This for the schedule."
           ></vjjl-content-band>
           <vjjl-schedule-band .items=${this.scheduleItems}></vjjl-schedule-band>
         `;
@@ -935,7 +935,7 @@ export class FinalProject extends DDDSuper(I18NMixin(LitElement)) {
         return html`
           <vjjl-content-band
             heading="About VJJL"
-            content="Vehicular Jiu-Jitsu League is a fictional sports association built for this prototype. This page shows one of the routed content areas required for the assignment."
+            content="Vehicular Jiu-Jitsu League is a sports association."
           ></vjjl-content-band>
         `;
       default:
