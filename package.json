@@ -18,5 +18,6 @@
   },
   "devDependencies": {
     "@web/dev-server": "0.4.6"
-  }
+  },
+  "outputDirectory": "."
 }
