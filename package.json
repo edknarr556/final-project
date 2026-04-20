@@ -19,6 +19,7 @@
     "@haxtheweb/i18n-manager": "^25.0.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.26.0",
     "@rollup/plugin-babel": "^6.0.4",
     "@rollup/plugin-node-resolve": "^15.3.1",
     "@web/dev-server": "0.4.6",
