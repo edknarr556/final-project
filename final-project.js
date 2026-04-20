@@ -124,14 +124,6 @@ class VjjlDarkToggle extends DDDSuper(LitElement) {
       })
     );
   }
-
-  render() {
-    return html`
-      <button @click=${this.toggleMode} aria-label="Toggle dark mode">
-        ${this.dark ? "Light mode" : "Dark mode"}
-      </button>
-    `;
-  }
 }
 customElements.define(VjjlDarkToggle.tag, VjjlDarkToggle);
 
@@ -260,13 +252,6 @@ class VjjlNavMenu extends DDDSuper(LitElement) {
       <div class="menu">
         <div class="primary">
           ${this.primaryItems.map((item) => this.renderLink(item))}
-          ${this.secondaryItems.length
-            ? html`
-                <button @click=${this.toggleExpanded} aria-expanded=${this.expanded ? "true" : "false"}>
-                  ${this.expanded ? "Close menu" : "More"}
-                </button>
-              `
-            : ""}
         </div>
         ${this.expanded && this.secondaryItems.length
           ? html`<div class="secondary">${this.secondaryItems.map((item) => this.renderLink(item))}</div>`
@@ -286,15 +271,15 @@ class VjjlHeroBanner extends DDDSuper(LitElement) {
     return {
       heading: { type: String },
       subheading: { type: String },
-      blurb: { type: String },
+      Text: { type: String },
     };
   }
 
   constructor() {
     super();
     this.heading = "Welcome to VJJL";
-    this.subheading = "A prototype homepage built with DDD";
-    this.blurb = "This homepage is built for check-in 1 and shows routing, reusable components, schedule bands, branding, and responsive structure.";
+    this.subheading = "A prototype homepage.";
+    this.Text = "testing testing 1, 2.";
   }
 
   static get styles() {
@@ -351,7 +336,7 @@ class VjjlHeroBanner extends DDDSuper(LitElement) {
         <div class="eyebrow">Vehicular Jiu-Jitsu League</div>
         <h1>${this.heading}</h1>
         <h2>${this.subheading}</h2>
-        <p>${this.blurb}</p>
+        <p>${this.Text}</p>
       </section>
     `;
   }
@@ -538,29 +523,6 @@ class VjjlScheduleBand extends DDDSuper(LitElement) {
         }
       `,
     ];
-  }
-
-  render() {
-    return html`
-      <section class="wrap">
-        <div class="heading">
-          <h3>Upcoming Events</h3>
-          <span>Loaded from schedule data</span>
-        </div>
-        <div class="grid">
-          ${this.items.map(
-            (item) => html`
-              <vjjl-schedule-item
-                .title=${item.title}
-                .date=${item.date}
-                .location=${item.location}
-                .status=${item.status}
-              ></vjjl-schedule-item>
-            `
-          )}
-        </div>
-      </section>
-    `;
   }
 }
 customElements.define(VjjlScheduleBand.tag, VjjlScheduleBand);
@@ -965,7 +927,7 @@ export class FinalProject extends DDDSuper(I18NMixin(LitElement)) {
         return html`
           <vjjl-content-band
             heading="Team Directory"
-            content="This routed page acts like a team area with reusable cards and grid structure for the progress check."
+            content="See the teams."
           ></vjjl-content-band>
           <vjjl-team-grid .members=${this.teamMembers}></vjjl-team-grid>
         `;
@@ -975,10 +937,6 @@ export class FinalProject extends DDDSuper(I18NMixin(LitElement)) {
             heading="About VJJL"
             content="Vehicular Jiu-Jitsu League is a fictional sports association built for this prototype. This page shows one of the routed content areas required for the assignment."
           ></vjjl-content-band>
-          <vjjl-content-band
-            heading="Check-in 1 focus"
-            content="For this stage, the goal is a functional homepage shell, routed links, DDD styling, reusable web components, and believable mock content."
-          ></vjjl-content-band>
         `;
       default:
         return html`
@@ -986,11 +944,11 @@ export class FinalProject extends DDDSuper(I18NMixin(LitElement)) {
           <div class="two-col">
             <vjjl-content-band
               heading="League Snapshot"
-              content="Explore upcoming matches, featured competitors, league rules, and branded content bands using reusable DDD-based web components."
+              content="Explore upcoming matches, featured competitors, league rules."
             ></vjjl-content-band>
             <vjjl-content-band
               heading="Prototype Goals"
-              content="This build demonstrates routing, header and footer structure, a collapsible top menu, mock schedule data, and a layout that can be upgraded for later check-ins."
+              content="This is goals."
             ></vjjl-content-band>
           </div>
           <vjjl-schedule-band .items=${this.scheduleItems}></vjjl-schedule-band>
