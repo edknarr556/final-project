@@ -3,8 +3,6 @@ import babel from '@rollup/plugin-babel';
 import { rollupPluginHTML as html } from '@web/rollup-plugin-html';
 import { importMetaAssets } from '@web/rollup-plugin-import-meta-assets';
 import esbuild from 'rollup-plugin-esbuild';
-import pkg from 'rollup-plugin-copy';
-const copy = pkg;
 
 export default {
   input: 'index.html',
@@ -16,46 +14,16 @@ export default {
     dir: 'public',
   },
   preserveEntrySignatures: false,
-
   plugins: [
-    /** Enable using HTML as rollup entrypoint */
     html({
       minify: true,
     }),
-    copy({
-      targets: [
-        {
-          src: 'assets/',
-          dest: `public/`,
-          flatten: false
-        },
-        {
-          src: 'node_modules/@haxtheweb/rpg-character/lib/',
-          dest: `public`,
-          flatten: false
-        },
-        {
-          src: ['node_modules/@haxtheweb/simple-icon/lib/svgs/*', '!elements/simple-icon/lib/svgs/elmsln-custom'],
-          dest: `public/svgs`,
-          flatten: false
-        },
-        {
-          src: 'node_modules/@haxtheweb/hax-iconset/lib/svgs/*',
-          dest: `public/svgs`,
-          flatten: false
-        },
-      ],
-    }),
-    /** Resolve bare module imports */
     nodeResolve(),
-    /** Minify JS, compile JS to a lower language target */
     esbuild({
       minify: true,
       target: ['chrome64', 'firefox67'],
     }),
-    /** Bundle assets references via import.meta.url */
     importMetaAssets(),
-    /** Minify html and css tagged template literals */
     babel({
       plugins: [
         [
@@ -69,11 +37,11 @@ export default {
               conservativeCollapse: true,
               removeComments: true,
               caseSensitive: true,
-              minifyCSS: true,
-            },
-          },
-        ],
-      ],
-    }),
-  ],
+              minifyCSS: true
+            }
+          }
+        ]
+      ]
+    })
+  ]
 };

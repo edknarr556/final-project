@@ -7,9 +7,11 @@
     "name": "Elijah Knarr"
   },
   "type": "module",
+  "main": "final-project.js",
+  "module": "final-project.js",
   "scripts": {
     "start": "web-dev-server --node-resolve --open --watch",
-    "build": "echo 'no build step needed'"
+    "build": "rimraf public && rollup -c"
   },
   "dependencies": {
     "lit": "^3.2.1",
@@ -17,7 +19,15 @@
     "@haxtheweb/i18n-manager": "^25.0.0"
   },
   "devDependencies": {
-    "@web/dev-server": "0.4.6"
-  },
-  "outputDirectory": "."
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-node-resolve": "^15.3.1",
+    "@web/dev-server": "0.4.6",
+    "@web/rollup-plugin-html": "^2.3.0",
+    "@web/rollup-plugin-import-meta-assets": "^2.2.1",
+    "babel-plugin-template-html-minifier": "^4.1.0",
+    "rimraf": "^5.0.7",
+    "rollup": "^3.29.5",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-esbuild": "^6.2.1"
+  }
 }
