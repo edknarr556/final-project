@@ -4,14 +4,13 @@
   <meta charset="utf-8">
   <title>VJJL | Vehicular Jiu-Jitsu League</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <script type="module" src="./final-project.js"></script>
-
   <style>
-    html, body {
+    :root, html, body {
       margin: 0;
       padding: 0;
-      background-color: var(--ddd-theme-default-limestone);
+      /* Default to limestone to prevent white flash before DDD loads */
+      background-color: var(--ddd-theme-default-limestone, #f5f5f5);
     }
   </style>
 </head>
