@@ -31,9 +31,9 @@ export class FinalProject extends DDDSuper(LitElement) {
     this.menuItems = [];
     this.menuOpen = false;
     this.images = [
-  "src/images/slideshowimg.jpg",
-  "src/images/slideshowimg1.jpg",
-  "src/images/slideshowimg2.jpg"
+  "/images/slideshowimg.jpg",
+  "/images/slideshowimg1.jpg",
+  "/images/slideshowimg2.jpg"
 ];
   }
 
