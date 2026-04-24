@@ -23,7 +23,7 @@ export class VjjlLogo extends DDDSuper(LitElement) {
     `];
   }
   render() {
-    return html`<div class="circle"><img src="VJJL.png" alt="VJJL"></div>`;
+    return html`<div class="circle"><img src="src/images/vjjl-logo-cropped.jpg" alt="VJJL"></div>`;
   }
 }
 customElements.define(VjjlLogo.tag, VjjlLogo);
