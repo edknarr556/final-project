@@ -31,9 +31,9 @@ export class FinalProject extends DDDSuper(LitElement) {
     this.menuItems = [];
     this.menuOpen = false;
     this.images = [
-  "./assets/slideshowimg.jpg",
-  "./assets/slideshowimg1.jpg",
-  "./assets/slideshowimg2.jpg"
+  new URL("./assets/slideshowimg.jpg", import.meta.url).href,
+  new URL("./assets/slideshowimg1.jpg", import.meta.url).href,
+  new URL("./assets/slideshowimg2.jpg", import.meta.url).href
 ];
   }
 
@@ -423,25 +423,25 @@ renderTeam() {
 
       <div class="card-grid">
         <vjjl-team-card
-          name="Team Redline"
-          rank="Blue Belt"
-          image="./assets/team-redline.jpg"
-          description="Technical control and precision finishes."
-        ></vjjl-team-card>
+  name="Team Redline"
+  rank="Blue Belt"
+  image="${new URL("./assets/team-redline.jpg", import.meta.url).href}"
+  description="Technical control and precision finishes."
+></vjjl-team-card>
 
-        <vjjl-team-card
-          name="Clutch Grappling"
-          rank="Purple Belt"
-          image="./assets/clutch-grappling.jpg"
-          description="Fast, aggressive, high-pressure grappling."
-        ></vjjl-team-card>
+<vjjl-team-card
+  name="Clutch Grappling"
+  rank="Purple Belt"
+  image="${new URL("./assets/clutch-grappling.jpg", import.meta.url).href}"
+  description="Fast, aggressive, high-pressure grappling."
+></vjjl-team-card>
 
-        <vjjl-team-card
-          name="Garage Guard"
-          rank="Brown Belt"
-          image="./assets/garage-guard.jpg"
-          description="Grip, position, and domination inside the vehicle."
-        ></vjjl-team-card>
+<vjjl-team-card
+  name="Garage Guard"
+  rank="Brown Belt"
+  image="${new URL("./assets/garage-guard.jpg", import.meta.url).href}"
+  description="Grip, position, and domination inside the vehicle."
+></vjjl-team-card>
       </div>
     </section>
   `;
@@ -450,7 +450,7 @@ renderTeam() {
 renderAbout() {
   return html`
     <section class="page-section">
-          <img class="wide-image" src="/images/slideshowimg.jpg">
+          <img class="wide-image" src="${new URL("./assets/slideshowimg.jpg", import.meta.url).href}" />
   
     <h1>About the VJJL</h1>
       <p>
