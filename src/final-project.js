@@ -354,7 +354,6 @@ nav a.active {
   <button class="logo-container" @click="${() => this.goToPage("home")}">
     <img src="${new URL("./assets/vjjl-logo-cropped.jpg", import.meta.url).href}" alt="VJJL Logo" />
   </button>
-</button>
         <div class="nav-area">
   <button class="menu-toggle" @click="${() => (this.menuOpen = !this.menuOpen)}">
     Menu
@@ -369,6 +368,7 @@ nav a.active {
 
       <main>
   ${this.renderView()}
+  <vjjl-footer></vjjl-footer>
 </main>
     `;
   }

@@ -36,8 +36,8 @@ export class VjjlFooter extends DDDSuper(LitElement) {
     return html`
       <footer>
         <div>© 2026 VJJL</div>
-        <div class="links">
-          <vjjl-social-link name="Instagram"></vjjl-social-link>
+<div class="social-corner">     
+       <vjjl-social-link name="Instagram"></vjjl-social-link>
           <vjjl-social-link name="Twitter"></vjjl-social-link>
           <vjjl-social-link name="YouTube"></vjjl-social-link>
         </div>
