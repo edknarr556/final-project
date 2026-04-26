@@ -374,7 +374,22 @@ nav a.active {
   }
 renderHome() {
   return html`
-    <section class="home-slideshow">...</section>
+    <section class="home-slideshow">
+      ${this.images.map(
+        (img, i) => html`
+          <img
+            src="${img}"
+            class="${this.activeIndex === i ? "active" : ""}"
+            alt="VJJL slideshow image"
+          />
+        `
+      )}
+
+      <div class="home-overlay">
+        <h1>Welcome to the VJJL</h1>
+        <p>Where grappling meets the open road.</p>
+      </div>
+    </section>
 
     <vjjl-event-strip></vjjl-event-strip>
 
