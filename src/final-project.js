@@ -464,9 +464,7 @@ renderTeam() {
 
 renderAbout() {
   return html`
-    <section class="page-section">
-          <img class="wide-image" src="${new URL("./assets/slideshowimg.jpg", import.meta.url).href}" />
-  
+    <section class="page-section">  
     <h1>About the VJJL</h1>
       <p>
         The Vehicular Jiu-Jitsu League is a competitive platform combining
