@@ -8,19 +8,27 @@ export class VjjlFooter extends DDDSuper(LitElement) {
   static get styles() {
     return [super.styles, css`
       footer {
-        padding: 2rem;
-        text-align: center;
-        background: var(--vjjl-header);
-        color: var(--vjjl-text);
-        margin-top: 2rem;
-      }
+  padding: 2rem;
+  text-align: center;
+  background: var(--vjjl-header);
+  color: var(--vjjl-text);
+  margin-top: 2rem;
+}
 
-      .links {
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
-        margin-top: 1rem;
-      }
+.social-corner {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  background: light-dark(#ffffff, #1a1a1a);
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  box-shadow: var(--ddd-boxShadow-sm);
+}
     `];
   }
 
