@@ -31,9 +31,9 @@ export class FinalProject extends DDDSuper(LitElement) {
     this.menuItems = [];
     this.menuOpen = false;
     this.images = [
-  "/images/slideshowimg.jpg",
-  "/images/slideshowimg1.jpg",
-  "/images/slideshowimg2.jpg"
+  "./assets/slideshowimg.jpg",
+  "./assets/slideshowimg1.jpg",
+  "./assets/slideshowimg2.jpg"
 ];
   }
 
@@ -351,8 +351,9 @@ nav a.active {
   render() {
     return html`
       <header>
-        <button class="logo-container" @click="${() => this.goToPage("home")}" aria-label="Go to home page">
-  <img src="/images/vjjl-logo-cropped.jpg" alt="VJJL Logo">
+  <button class="logo-container" @click="${() => this.goToPage("home")}">
+    <img src="${new URL("./assets/vjjl-logo-cropped.jpg", import.meta.url).href}" alt="VJJL Logo" />
+  </button>
 </button>
         <div class="nav-area">
   <button class="menu-toggle" @click="${() => (this.menuOpen = !this.menuOpen)}">
@@ -424,21 +425,21 @@ renderTeam() {
         <vjjl-team-card
           name="Team Redline"
           rank="Blue Belt"
-          image="/images/team-redline.jpg"
+          image="./assets/team-redline.jpg"
           description="Technical control and precision finishes."
         ></vjjl-team-card>
 
         <vjjl-team-card
           name="Clutch Grappling"
           rank="Purple Belt"
-          image="/images/clutch-grappling.jpg"
+          image="./assets/clutch-grappling.jpg"
           description="Fast, aggressive, high-pressure grappling."
         ></vjjl-team-card>
 
         <vjjl-team-card
           name="Garage Guard"
           rank="Brown Belt"
-          image="/images/garage-guard.jpg"
+          image="./assets/garage-guard.jpg"
           description="Grip, position, and domination inside the vehicle."
         ></vjjl-team-card>
       </div>
@@ -449,12 +450,13 @@ renderTeam() {
 renderAbout() {
   return html`
     <section class="page-section">
-      <h1>About the VJJL</h1>
+          <img class="wide-image" src="/images/slideshowimg.jpg">
+  
+    <h1>About the VJJL</h1>
       <p>
         The Vehicular Jiu-Jitsu League is a competitive platform combining
         grappling with vehicle-based scenarios.
       </p>
-      <img class="wide-image" src="/images/slideshowimg.jpg">
     </section>
   `;
 }
