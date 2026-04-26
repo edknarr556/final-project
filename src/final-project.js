@@ -352,7 +352,7 @@ nav a.active {
     return html`
       <header>
         <button class="logo-container" @click="${() => this.goToPage("home")}" aria-label="Go to home page">
-  <img src="src/images/vjjl-logo-cropped.jpg" alt="VJJL Logo">
+  <img src="/images/vjjl-logo-cropped.jpg" alt="VJJL Logo">
 </button>
         <div class="nav-area">
   <button class="menu-toggle" @click="${() => (this.menuOpen = !this.menuOpen)}">
@@ -424,21 +424,21 @@ renderTeam() {
         <vjjl-team-card
           name="Team Redline"
           rank="Blue Belt"
-          image="src/images/team-redline.jpg"
+          image="/images/team-redline.jpg"
           description="Technical control and precision finishes."
         ></vjjl-team-card>
 
         <vjjl-team-card
           name="Clutch Grappling"
           rank="Purple Belt"
-          image="src/images/clutch-grappling.jpg"
+          image="/images/clutch-grappling.jpg"
           description="Fast, aggressive, high-pressure grappling."
         ></vjjl-team-card>
 
         <vjjl-team-card
           name="Garage Guard"
           rank="Brown Belt"
-          image="src/images/garage-guard.jpg"
+          image="/images/garage-guard.jpg"
           description="Grip, position, and domination inside the vehicle."
         ></vjjl-team-card>
       </div>
@@ -454,6 +454,7 @@ renderAbout() {
         The Vehicular Jiu-Jitsu League is a competitive platform combining
         grappling with vehicle-based scenarios.
       </p>
+      <img class="wide-image" src="/images/slideshowimg.jpg">
     </section>
   `;
 }
