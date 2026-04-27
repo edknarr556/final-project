@@ -158,17 +158,6 @@ try {
   height: 100%;
   object-fit: cover;
 }
-
-        nav {
-          display: flex;
-          gap: 2rem;
-        }
-
-
-        nav a:hover {
-          color: var(--ddd-theme-default-original87Red);
-        }
-
         /* Hero / Slideshow */
         .hero {
           position: relative;

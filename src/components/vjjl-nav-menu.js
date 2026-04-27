@@ -16,7 +16,7 @@ export class VjjlNavMenu extends DDDSuper(LitElement) {
 
 a {
   text-decoration: none;
-  color: var(--ddd-theme-default-original87Red);  
+  color: var(--ddd-theme-default-original87Red) !important;  
   font-family: var(--ddd-font-navigation);
   font-weight: 700;
   padding: var(--ddd-spacing-2);
