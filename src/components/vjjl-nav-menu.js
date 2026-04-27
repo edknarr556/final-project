@@ -16,8 +16,8 @@ export class VjjlNavMenu extends DDDSuper(LitElement) {
 
 :host a {
   text-decoration: none;
-  color: var(--ddd-theme-default-original87Red);
-  font-family: var(--ddd-font-navigation);
+  color: var(--vjjl-red);
+font-family: var(--ddd-font-navigation);
   font-weight: 700;
   padding: var(--ddd-spacing-2);
 }
@@ -25,13 +25,14 @@ export class VjjlNavMenu extends DDDSuper(LitElement) {
 
 :host a:hover {
   text-decoration: underline;
+  text-shadow: 0 0 4px var(--vjjl-red);
 }
 
 
 :host a.active {
-  border-bottom: 3px solid var(--ddd-theme-default-original87Red);
+  border-bottom: 3px solid var(--vjjl-red);
 
-  text-shadow: 0 0 6px var(--ddd-theme-default-original87Red);
+  text-shadow: 0 0 6px var(--vjjl-red);
 
   transition: all 0.2s ease;
 }

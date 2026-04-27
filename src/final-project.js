@@ -102,6 +102,7 @@ try {
 
           color-scheme: light dark;
 
+          --vjjl-red: var(--ddd-theme-default-original87Red);
           --vjjl-bg: var(--ddd-theme-default-original87Red);
           --vjjl-header: #ffffff;
           --vjjl-text: #000000;
@@ -117,6 +118,7 @@ try {
             --vjjl-header: #1a1a1a;
             --vjjl-text: #ffffff;
             --vjjl-accent: var(--ddd-theme-default-original87Red);
+            
           }
         }
 
