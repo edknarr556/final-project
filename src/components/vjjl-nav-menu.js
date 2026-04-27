@@ -14,27 +14,25 @@ export class VjjlNavMenu extends DDDSuper(LitElement) {
 }
 
 
-a {
+:host a {
   text-decoration: none;
-  color: var(--ddd-theme-default-original87Red) !important;  
+  color: var(--ddd-theme-default-original87Red);
   font-family: var(--ddd-font-navigation);
   font-weight: 700;
   padding: var(--ddd-spacing-2);
 }
 
 
-a:hover {
+:host a:hover {
   text-decoration: underline;
 }
 
 
-a.active {
+:host a.active {
   border-bottom: 3px solid var(--ddd-theme-default-original87Red);
 
-  /* 🔥 subtle glow */
   text-shadow: 0 0 6px var(--ddd-theme-default-original87Red);
 
-  /* smooth transition */
   transition: all 0.2s ease;
 }
     `];
