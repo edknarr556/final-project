@@ -6,32 +6,36 @@ export class VjjlNavMenu extends DDDSuper(LitElement) {
   static get properties() { return { items: { type: Array }, currentPage: { type: String } }; }
   static get styles() {
     return [super.styles, css`
+      
+      
       .menu {
   display: flex;
   gap: var(--ddd-spacing-4);
-  background: var(--ddd-theme-default-original87Red);
-  padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
-  border-radius: var(--ddd-radius-md);
-  box-shadow: var(--ddd-boxShadow-sm);
 }
+
 
 a {
   text-decoration: none;
-  color: var(--ddd-theme-default-white);
+  color: var(--ddd-theme-default-original87Red);  
   font-family: var(--ddd-font-navigation);
   font-weight: 700;
   padding: var(--ddd-spacing-2);
-  border-radius: var(--ddd-radius-sm);
 }
+
 
 a:hover {
-  background: var(--ddd-theme-default-coalyGray);
-  color: var(--ddd-theme-default-white);
+  text-decoration: underline;
 }
 
+
 a.active {
-  background: var(--ddd-theme-default-white);
-  color: var(--ddd-theme-default-original87Red);
+  border-bottom: 3px solid var(--ddd-theme-default-original87Red);
+
+  /* 🔥 subtle glow */
+  text-shadow: 0 0 6px var(--ddd-theme-default-original87Red);
+
+  /* smooth transition */
+  transition: all 0.2s ease;
 }
     `];
   }

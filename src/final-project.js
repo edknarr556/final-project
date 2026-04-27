@@ -203,7 +203,7 @@ try {
           border: 2px solid var(--ddd-theme-default-original87Red);
         }
 
-        /* Calendar View */
+
         .calendar-container {
           padding: 2rem;
           background: var(--vjjl-header);
