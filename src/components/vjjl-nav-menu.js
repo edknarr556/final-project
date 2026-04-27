@@ -43,10 +43,20 @@ font-family: var(--ddd-font-navigation);
     this.dispatchEvent(new CustomEvent("page-changed", { detail: { page }, bubbles: true, composed: true }));
   }
   render() {
-    return html`<nav class="menu">${this.items.map(item => html`
-      <a href="?page=${item.page}" class="${this.currentPage === item.page ? "active" : ""}" 
-         @click="${(e) => this.goToPage(item.page, e)}">${item.title}</a>
-    `)}</nav>`;
-  }
+  return html`
+    <nav class="menu">
+      ${this.items.map(item => html`
+        <a
+          href="?page=${item.page}"
+          style="color: var(--ddd-theme-default-original87Red);"
+          class="${this.currentPage === item.page ? "active" : ""}"
+          @click="${(e) => this.goToPage(item.page, e)}"
+        >
+          ${item.title}
+        </a>
+      `)}
+    </nav>
+  `;
+}
 }
 customElements.define(VjjlNavMenu.tag, VjjlNavMenu);
