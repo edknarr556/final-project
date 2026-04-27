@@ -9,29 +9,29 @@ export class VjjlNavMenu extends DDDSuper(LitElement) {
       .menu {
   display: flex;
   gap: var(--ddd-spacing-4);
-  background: var(--ddd-theme-default-original87Red); 
-  padding: 0.5rem 1rem;
-  border-radius: 8px;
+  background: var(--ddd-theme-default-original87Red);
+  padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
+  border-radius: var(--ddd-radius-md);
+  box-shadow: var(--ddd-boxShadow-sm);
 }
 
 a {
   text-decoration: none;
-  color: white;              
+  color: var(--ddd-theme-default-white);
   font-family: var(--ddd-font-navigation);
   font-weight: 700;
   padding: var(--ddd-spacing-2);
-  transition: all 0.2s ease;
+  border-radius: var(--ddd-radius-sm);
 }
 
-/* Hover effect */
 a:hover {
-  background: rgba(0,0,0,0.2);
-  border-radius: 4px;
+  background: var(--ddd-theme-default-coalyGray);
+  color: var(--ddd-theme-default-white);
 }
 
-/* Active page */
 a.active {
-  border-bottom: 3px solid white;
+  background: var(--ddd-theme-default-white);
+  color: var(--ddd-theme-default-original87Red);
 }
     `];
   }

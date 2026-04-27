@@ -164,13 +164,6 @@ try {
           gap: 2rem;
         }
 
-        nav a {
-          text-decoration: none;
-          color: var(--vjjl-text);
-          font-weight: bold;
-          text-transform: uppercase;
-          cursor: pointer;
-        }
 
         nav a:hover {
           color: var(--ddd-theme-default-original87Red);
@@ -316,10 +309,7 @@ img {
   cursor: pointer;
 }
 
-nav a.active {
-  color: var(--ddd-theme-default-original87Red);
-  border-bottom: 3px solid var(--ddd-theme-default-original87Red);
-}
+
 
 @media (max-width: 768px) {
   .nav-area {
